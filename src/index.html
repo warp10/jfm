@@ -19,6 +19,13 @@
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+        var kmlFile = 'https://maps.google.com/maps/ms?doflg=ptm&ie=UTF8&t=m&vpsrc=0&source=embed&authuser=0&msa=0&output=kml&msid=202275666324183994968.0004ac95329178bc348e8';
+        var kmlOptions = {
+		suppressInfoWindows: true,
+		preserveViewport: false,
+		map: map
+	};
+	var kmlLayer = new google.maps.KmlLayer(kmlFile, kmlOptions);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
